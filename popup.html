@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Chat Overlay</title>
+    <style>
+      body { font-family: Arial; text-align: center; }
+      button { background: #4caf50; color: white; padding: 10px; border: none; cursor: pointer; }
+      button:hover { background: #45a049; }
+    </style>
+  </head>
+  <body>
+    <h3>AI Chat Overlay</h3>
+    <button id="toggle-chat">Enable Chat</button>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="popup.js"></script>
+  </body>
+</html>

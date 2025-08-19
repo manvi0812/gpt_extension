@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "AI Chat Overlay Plugin",
+    "version": "1.0",
+    "description": "Add a GPT-powered chat overlay on any website.",
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "icons": {
+      "48": "icon48.png"
+    },
+    "host_permissions": ["https://*/*", "http://*/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon48.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["dist/bundle.js"],
+        "css": ["chat.css"],
+        "type": "module"
+      }
+    ]
+}
+  
